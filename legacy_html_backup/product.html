@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        
+        <!--========== CSS SLICK ==========-->
+        <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
+        
+        <title>Responsive website sneakers</title>
+    </head>
+    <body>
+
+        <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+
+                <a href="#" class="nav__logo">FanHelmet</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Beranda</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Tentang Kami</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Tentang Produk</a></li>
+                        <li class="nav__item"><a href="#products" class="nav__link">Produk</a></li>
+                        <li class="nav__item"><a href="#size" class="nav__link">Ukuran</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Hubungi Kami</a></li>
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>              
+       
+                <div class="nav__shop">
+                    <a href="#" class="nav__icon">
+                        <i class='bx bx-shopping-bag'></i>
+                        <span>2</span>
+                    </a>
+                    
+                    <div class="nav__shop-content">
+                        
+                        <div class="title_shop">
+                            <span>Keranjang Belanja</span>
+                        </div>
+                    
+                        <div class="item">                       
+                            <div class="image_cart">
+                                <div class="image_c">
+                                    <img src="assets/img/helmet1.png" alt="">
+                                </div>
+                            </div>                     
+                            <div class="description">
+                                <span>FullFan</span>
+                                <span>1 Pcs</span>
+                            </div>                            
+                            <div class="total-price">Rp.1.000.000</div>
+                            <a href="#" class="delete-item">
+                                <i class='bx bx-x'></i>
+                            </a>
+                        </div>
+        
+                        <div class="item">                       
+                            <div class="image_cart">
+                                <div class="image_c">
+                                    <img src="assets/img/helmet2.png" alt="">
+                                </div>
+                            </div>                       
+                            <div class="description">
+                                <span>Road Fan</span>
+                                <span>1 Pcs</span>
+                            </div>                        
+                            <div class="total-price">Rp. 900.000</div>
+                            <a href="#" class="delete-item">
+                                <i class='bx bx-x'></i>
+                            </a>
+                        </div>
+                        <div class="total-all">
+                            <span>Total</span>
+                            <span>Rp.1.900.000</span>
+                        </div>
+                        <div class="btn-viewcard">
+                            <a href="#" class="button-top">View Card</a>
+                        </div>
+                        <div class="btn-checkout">
+                            <a href="#" class="button-top2">Check Out</a>
+                        </div>                        
+                    </div>
+                </div>                 
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--========== PAGINATION ==========-->            
+            <section class="section bd-container" id="breadcrumb">
+                <div class="bd-grid breadcrumb">
+                    <div class="breadcrumb">
+                        <li><a href="#"> <i class='bx bxs-home'></i>  Beranda</a></li>
+                        <li>Detail</li>
+                    </div>
+                    <div class="breadcrumb-pagination">
+                    </div>
+                </div>
+            </section>    
+       
+            <!--========== DETAIL ==========-->
+            <section class="detail bd-container" id="detail">
+                <div class="detail__container  bd-grid">
+                    <div class="detail__img">
+                        <div class="product-pic-zoom">
+                            <img class="product-big-img" src="assets/img/helmet2.png" alt="" />
+                        </div>
+                        <div class="product-thumbs ">
+                            <div class="product-thumbs-track ps-slider bd-grid multiple-items">
+                                <div class="pt active" data-imgbigurl="assets/img/helmet2.png">
+                                    <img src="assets/img/detail_1.jpg" alt="" />
+                                </div>
+                                <div class="pt" data-imgbigurl="assets/img/detail_2.jpg">
+                                    <img src="assets/img/detail_2.jpg" alt="" />
+                                </div>
+                                <div class="pt" data-imgbigurl="assets/img/detail_3.jpg">
+                                    <img src="assets/img/detail_3.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail__data">
+                        <span class="section-subtitle detail__initial">FanHelmet</span>
+                        <h2 class="section-title detail__initial">Road Fan</h2>
+                        <p class="detail__description"> <b>Spesifikasi</b><br>                       ​
+                            Warna : Hitam
+
+                            <div class="size_detail-container">
+                                <b>UKURAN</b>
+                                <div class="sizes_detail" >
+                                    <span class="size_detail">XS</span>
+                                    <span class="size_detail">S</span>
+                                    <span class="size_detail">M</span>
+                                    <span class="size_detail">L</span>
+                                    <span class="size_detail">X</span>
+                                    <span class="size_detail">XXL</span>
+                                   
+                                </div>
+                            </div>   
+                            <b>MATERIALS</b><br>                          
+                            Plastik ABS (Acrylonitrile Butadiene Styrene)     : ABS adalah salah satu jenis plastik thermoplastic yang kuat, 
+                            tahan lama, tahan gores dan kimia dengan permukaan yang halus.Plastik ABS sering digunakan untuk pipa,
+                             stik golf, parts otomotif, pelindung kepala / helm dan mainan. <br>
+                            <div class="price_detail">
+                                <b>Rp. 900.000</b>
+                            </div>
+                            <br>    
+                        <a href="shopping-cart.html" class="button">Tambahkan Keranjang</a>
+                    </div> 
+                </div>
+            </section>
+
+            <!--========== PRODUCTS ==========-->
+            <section class="products section bd-container" id="products">
+                <h2 class="section-title">Related Products</h2>
+
+                <div class="products__container bd-grid logo-slider slick_two">
+                    
+                    <div class="products__content">
+                        <img src="assets/img/helmet1.png" alt="" class="products__img">
+                        <h3 class="products__name">Full Fan</h3>
+                        <span class="products__detail">XL</span><br>
+                        <span class="products__preci">Rp.1.000.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Produk</i></a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="products__content">
+                        <img src="assets/img/helmet2.png" alt="" class="products__img" >
+                        <h3 class="products__name">Road Fan</h3>
+                        <span class="products__detail">M</span><br>
+                        <span class="products__preci">Rp. 900.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Produk</i></a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="products__content">
+                        <img src="assets/img/helmet3.png" alt="" class="products__img">
+                        <h3 class="products__name">Retro Fan</h3>
+                        <span class="products__detail">L</span><br>
+                        <span class="products__preci">Rp. 750.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Produk</i></a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+
+                    <div class="products__content">
+                        <img src="assets/img/helmet4.png" alt="" class="products__img">
+                        <h3 class="products__name">Urban</h3>
+                        <span class="products__detail">L</span><br>
+                        <span class="products__preci">Rp. 500.000,-</span>
+                        <a href="#" class="button products__button_detail">Detail Produk</i></a>
+                        <a href="#" class="button products__button"><i class='bx bx-cart-alt'></i></a>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">Fan Helm</a>
+                    <span class="footer__description">Toko</span>
+                    <div>
+                        <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Layanan</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Pengiriman Dan Pengembalian</a></li>
+                        <li><a href="#" class="footer__link"></a>Panduan Pengukuran</li>
+                        <li><a href="#" class="footer__link">Bagan Konversi Ukuran</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Informasi</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Acara</a></li>
+                        <li><a href="#" class="footer__link">Hubungi Kami</a></li>
+                        <li><a href="#" class="footer__link">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="footer__link">Ketentuan Layanan</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Alamat</h3>
+                    <ul>
+                        <li>Jl. Eyang Weri</li>
+                        <li>Kuningan 45511 - Indonesia</li>
+                        <li>Phone : +62-821-1807-9547</li>
+                        <li>WhatsApp : 082118079547</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2023 Fauzi Akbar. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="assets/js/main.js"></script>
+        
+                       
+        <!--========== JS SLICK ==========-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script  src="assets/js/slick.js"></script>
+        <script  src="assets/js/slick.min.js"></script>
+
+        <script>
+            $('.slick_two').slick({
+                dots: true,
+                arrows: true,                
+                infiniite: true,
+                autoplay: true,
+                speed: 2000,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                    breakpoint: 5000,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                    },
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
+            });
+
+            $('.multiple-items').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 3
+            });
+
+            /*---Single Product---*/
+            $('.product-thumbs-track .pt').on('click', function () {
+                $('.product-thumbs-track .pt').removeClass('active');
+                $(this).addClass('active');
+                var imgurl = $(this).data('imgbigurl');
+                var bigImg = $('.product-big-img').attr('src');
+                if (imgurl != bigImg) {
+                    $('.product-big-img').attr({
+                        src: imgurl
+                    });
+                    $('.zoomImg').attr({
+                        src: imgurl
+                    });
+                }
+            });
+
+            $('.product-pic-zoom').zoom();
+        </script>
+     
+    </body>
+</html>

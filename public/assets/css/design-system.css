@@ -1,0 +1,278 @@
+/* =====================================================================
+   FAN HELM — DESIGN SYSTEM
+   Satu bahasa visual untuk seluruh situs (toko & admin), menggantikan
+   tema racing merah/kuning lama dengan gaya minimalis yang tenang.
+   File ini dimuat SETELAH styles.css / bootstrap, sehingga variabel
+   :root di bawah menimpa token lama dan otomatis meretema komponen
+   lama yang masih memakai var(--first-color) dkk.
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ---- Warna inti ------------------------------------------------ */
+  --ink: #1B1E21;            /* teks utama, judul */
+  --slate: #565C63;          /* teks sekunder */
+  --slate-soft: #8A9096;     /* teks tersier / placeholder */
+  --mist: #E1E4E2;           /* garis pembatas */
+  --mist-soft: #ECEFED;      /* garis pembatas halus di atas putih */
+  --fog: #F1F3F1;            /* latar halaman */
+  --white: #FFFFFF;
+
+  --teal: #D9631E;           /* aksen utama BARU — oranye ember, terinspirasi visor/rambu keselamatan */
+  --teal-deep: #B34F17;      /* hover/aktif dari aksen utama */
+  --teal-wash: #FBEADC;      /* latar lembut aksen utama */
+
+  --amber: #2B6660;          /* aksen kedua — teal tua, dipakai hemat untuk harga & highlight sekunder */
+  --amber-deep: #1E4A45;
+
+  --success: #2F7A4D;
+  --success-wash: #E8F3EC;
+  --danger: #B23B26;
+  --danger-wash: #FBEAE6;
+  --warning: #A8791E;
+  --warning-wash: #F6EEDC;
+
+  /* ---- Kompatibilitas mundur dengan styles.css / komponen lama ---- */
+  --first-color: var(--teal);
+  --first-color-alt: var(--teal-deep);
+  --accent-dark: var(--ink);
+  --accent-yellow: var(--amber);
+  --title-color: var(--ink);
+  --text-color: var(--slate);
+  --text-color-light: var(--slate-soft);
+  --body-color: var(--fog);
+  --container-color: var(--white);
+  --border-subtle: var(--mist);
+  --body-font: 'Inter', sans-serif;
+
+  /* ---- Tipografi --------------------------------------------------*/
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* ---- Bentuk & bayangan ------------------------------------------*/
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(27, 30, 33, 0.06);
+  --shadow-md: 0 4px 16px rgba(27, 30, 33, 0.08);
+  --shadow-lg: 0 12px 32px rgba(27, 30, 33, 0.12);
+}
+
+/* =====================================================================
+   RESET RINGAN ATAS DEKORASI LAMA
+   ===================================================================== */
+
+body {
+  font-family: var(--font-body) !important;
+  background-color: var(--fog);
+  color: var(--slate);
+  letter-spacing: 0;
+}
+
+h1, h2, h3, h4, .section-title, .home__title, .nav__logo, .footer__logo {
+  font-family: var(--font-display);
+}
+
+/* Garis balap lama dimatikan — bukan bagian dari arah desain baru */
+.race-stripe { display: none !important; }
+
+a { text-decoration: none; }
+
+::selection { background: var(--teal); color: var(--white); }
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* =====================================================================
+   HEADER / NAV — datar, satu garis tipis, tanpa blur kaca
+   ===================================================================== */
+
+.l-header {
+  background: var(--white) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid var(--mist) !important;
+  box-shadow: none !important;
+}
+
+.nav__logo {
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  color: var(--ink) !important;
+}
+.nav__logo i { color: var(--teal) !important; font-size: 1.35rem !important; }
+
+.nav__link {
+  font-family: var(--font-body);
+  font-weight: 500 !important;
+  color: var(--slate) !important;
+}
+.nav__link:hover, .active-link {
+  color: var(--ink) !important;
+}
+
+.nav__icon { color: var(--ink) !important; }
+.nav__icon span {
+  background-color: var(--teal) !important;
+  font-weight: 600 !important;
+}
+
+.user-btn {
+  background: var(--fog) !important;
+  border: 1px solid var(--mist) !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--ink) !important;
+}
+.user-btn:hover { background: var(--mist-soft) !important; }
+.user-avatar-sm {
+  background: var(--ink) !important;
+  border-radius: var(--radius-sm) !important;
+}
+.user-menu-box {
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--mist) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+.user-menu-item:hover { background: var(--fog) !important; color: var(--ink) !important; }
+
+.btn-auth-link {
+  border-radius: var(--radius-sm) !important;
+  font-weight: 500 !important;
+}
+.btn-auth-login { background: var(--fog) !important; color: var(--ink) !important; }
+.btn-auth-login:hover { background: var(--mist-soft) !important; }
+.btn-auth-register {
+  background: var(--ink) !important;
+  box-shadow: none !important;
+}
+.btn-auth-register:hover { background: var(--teal-deep) !important; }
+
+/* =====================================================================
+   TOMBOL — datar, sudut sedang, tanpa gradasi/glow
+   ===================================================================== */
+
+.btn-energy,
+.button, .btn-primary, .btn-checkout, .button-top2 {
+  background: var(--ink) !important;
+  background-image: none !important;
+  color: var(--white) !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: none !important;
+  transition: background-color 0.15s ease;
+}
+.btn-energy:hover, .button:hover, .btn-primary:hover, .btn-checkout:hover, .button-top2:hover {
+  background: var(--teal-deep) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-outline, .button-top {
+  background: var(--white) !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--mist) !important;
+  border-radius: var(--radius-sm) !important;
+  font-weight: 600 !important;
+}
+.btn-outline:hover, .button-top:hover {
+  border-color: var(--ink) !important;
+  background: var(--fog) !important;
+}
+
+/* =====================================================================
+   BADGE / STATUS PILL
+   ===================================================================== */
+
+.badge {
+  border-radius: var(--radius-sm) !important;
+  font-weight: 600 !important;
+}
+.badge-warning { background: var(--warning-wash) !important; color: var(--warning) !important; }
+.badge-success { background: var(--success-wash) !important; color: var(--success) !important; }
+.badge-info { background: var(--teal-wash) !important; color: var(--teal-deep) !important; }
+.badge-primary { background: var(--teal-wash) !important; color: var(--teal-deep) !important; }
+.badge-danger { background: var(--danger-wash) !important; color: var(--danger) !important; }
+.badge-secondary { background: var(--fog) !important; color: var(--slate) !important; }
+
+/* =====================================================================
+   FLASH ALERT
+   ===================================================================== */
+
+.flash-alert {
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+.flash-success { background-color: var(--success-wash) !important; color: var(--success) !important; border: 1px solid var(--success) !important; }
+.flash-error { background-color: var(--danger-wash) !important; color: var(--danger) !important; border: 1px solid var(--danger) !important; }
+
+/* =====================================================================
+   FOOTER — gelap netral, bukan navy generik
+   ===================================================================== */
+
+.footer {
+  background: var(--ink) !important;
+}
+.footer__title { font-family: var(--font-display); }
+.footer__link:hover { color: var(--white) !important; }
+.footer__copy { border-top: 1px solid rgba(255,255,255,0.08) !important; }
+
+.home__title {
+  color: var(--ink) !important;
+}
+
+.section-subtitle {
+  background: var(--teal-wash) !important;
+  color: var(--teal-deep) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  border-radius: var(--radius-sm) !important;
+  font-weight: 600 !important;
+}
+
+/* =====================================================================
+   KARTU PRODUK & ELEMEN UMUM (dipakai lintas halaman)
+   ===================================================================== */
+
+.card, .product__card, .table-container, .panel {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--mist);
+  box-shadow: var(--shadow-sm);
+}
+
+.product-card-modern, .trust-card, .detail-card, .admin-card {
+  box-shadow: var(--shadow-sm) !important;
+}
+.product-card-modern:hover {
+  box-shadow: var(--shadow-md) !important;
+}
+
+table th {
+  font-family: var(--font-body);
+  color: var(--slate);
+  font-weight: 600;
+}
+
+/* Scroll-to-top */
+.scrolltop {
+  background-color: var(--ink) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+/* =====================================================================
+   UTILITAS SPEC-SHEET (baris spesifikasi helm, dipakai di halaman produk)
+   ===================================================================== */
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--mist-soft);
+  font-size: 0.92rem;
+}
+.spec-row dt { color: var(--slate); }
+.spec-row dd { color: var(--ink); font-weight: 600; }
