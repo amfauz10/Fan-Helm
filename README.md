@@ -75,7 +75,11 @@ Buka `http://127.0.0.1:8000` untuk melihat halaman toko, atau `/admin` untuk mas
 
 ## Tangkapan Layar
 
-*(Tambahkan beberapa screenshot di sini: halaman utama, halaman produk, checkout, dan dashboard admin)*
+![Home](Home.png)
+![Tap kartu RFID](TapRFID.png)
+![Detail Product](Detail-Product.png)
+![Payment](Payment.png)
+![Dashboard admin](Admin.png)
 
 ## Catatan
 
